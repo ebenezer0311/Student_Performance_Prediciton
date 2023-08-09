@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Input Form</h1>
+        <form method="post" action="/predict">
+            <label for="mid_marks1">Mid Marks 1:</label>
+            <input type="text" step="0.01" placeholder="(0-20) Marks" name="mid_marks1" required>
+            
+            <label for="mid_marks2">Mid Marks 2:</label>
+            <input type="text" step="0.01" placeholder="(0-20) Marks" name="mid_marks2" required>
+            
+            <label for="studytime">Study Time:</label>
+            <input type="text" placeholder="(0-4) Hrs" name="studytime" required>
+            
+            <label for="failures">Failures:</label>
+            <input type="text" placeholder="(0-2)subjects" name="failures" required>
+            
+            <label for="absences">Absences:</label>
+            <input type="text" placeholder="(0-100) absences %"name="absences" required>
+            
+            <label for="freetime">Free Time:</label>
+            <input type="text" placeholder="(0-5) Hrs "name="freetime" required>
+            
+            <label for="traveltime">Travel Time:</label>
+            <input type="text" placeholder="(0-4) Hrs" name="traveltime" required>
+            
+            <button type="submit">Prediction</button>
+        </form>
+    <h2>{{prediction_text}}</h2>
+    </div>
+    
+</body>
+</html>
