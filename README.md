@@ -12,6 +12,6 @@ Predicting student performance can have significant educational implications. Th
 
 ## Requirements(used)
 - Python (version 3.11)
-- Libraries: numpy, pandas, scikit-learn (sklearn),pickle
-
+- Libraries: numpy, pandas, matplotlib.plotly, seaborn, scikit-learn (sklearn), pickle.
+- Dataset: included (else if not working: https://archive.ics.uci.edu/dataset/320/student+performance).
 
